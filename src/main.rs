@@ -1,3 +1,12 @@
+use structopt::StructOpt;
+
+#[derive(StructOpt)]
+#[structopt(name = "jsh", version = "v0.0")]
+struct Config {
+    #[structopt(short, long)]
+    debug: bool,
+}
+
 fn main() {
-    println!("Hello, world!");
+    let config = Config::from_args();
 }
