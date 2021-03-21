@@ -13,6 +13,8 @@ pub struct Jsh {
     config: Config,
 }
 
+mod scanner;
+
 impl Jsh {
     pub fn new(config: Config) -> Jsh {
         Jsh {
