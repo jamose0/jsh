@@ -15,6 +15,8 @@ pub struct Jsh {
 
 mod scanner;
 
+use scanner::Scanner;
+
 impl Jsh {
     pub fn new(config: Config) -> Jsh {
         Jsh {
@@ -30,6 +32,7 @@ impl Jsh {
             match readline {
                 Ok(line) => {
                     println!("line: {}", line);
+                    Scanner::new(&line);
                 },
                 Err(e) => {
                     eprintln!("Err: {}", e);
